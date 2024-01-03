@@ -1,0 +1,22 @@
+{% extends 'crm/base.html' %}
+
+<html>
+    {% block content %}
+    <h>Homepage!</h>
+    <p>Welcome</p>
+    {% for client in datas %}
+        {{client.id}} <br>
+        {{client.firstname}}<br>
+        {{client.GPA}}<hr>
+
+        
+    {% endfor %}
+    {% if datas.0.firstname == 'viphava' %}
+    <h5>My firstname is {{datas.0.firstname}}</h5>
+    {% else %}
+    <h5>Access denied</h5>
+    {% endif %}
+
+    {% endblock %}
+
+</html>
