@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Task
 
 def register(request):
     return render(request, "crm/register.html")
+
+def task(request):
+    queryDataAll = Task.objects.all()
+    context = {'allTasks': queryDataAll}
+    return render(request, "crm/task.html", context)
 
 # Create your views here.
 def homepage(request):
