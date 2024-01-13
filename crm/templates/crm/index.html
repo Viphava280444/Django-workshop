@@ -2,7 +2,7 @@
 
 <html>
     {% block content %}
-    <h>Homepage!</h>
+    <h>Homepage3!</h>
     <p>Welcome</p>
     {% for client in datas %}
         {{client.id}} <br>
@@ -16,6 +16,8 @@
     {% else %}
     <h5>Access denied</h5>
     {% endif %}
+
+    <a href="{% url 'task-form' %}">Go to my task form</a>
 
     {% endblock %}
 
